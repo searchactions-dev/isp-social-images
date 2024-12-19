@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Basic styles for the Image Generator App */
+:root {
+    --primary-color: #ffd200;
+    --secondary-color: #f4f4f4;
+    --accent-color: #ff6b6b;
+    --text-color: #0a0f12;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    /* Updated font-family to include Poppins */
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+}
+
+button {
+    background-color: var(--primary-color) !important;
+    color: var(--text-color) !important;
+    border: none !important;
+    padding: 10px 15px !important;
+    border-radius: 5px !important;
+    font-weight: 600 !important;
+    font-size: .85em !important;
+}
+
+h1 {
+    color: #333;
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+#facebook-preview,
+#linkedin-preview,
+#twitter-preview {
+    margin-bottom: 1em;
+}
+
+#facebook-preview {
+    background-image: url('/public/assets/img/fb-preview.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+
+#linkedin-preview {
+    background-image: url('/public/assets/img/linkedin.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#twitter-preview {
+    background-image: url('/public/assets/img/x-preview.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.image-preview {
+    margin-bottom: 2em;
+}
+
+#facebook-preview>div,
+#linkedin-preview>div,
+#twitter-preview>div {
+    padding: 4em 2em;
+}
+
+p.achieved-audit {
+    color: #fff;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+p.achieved-audit span {
+    color: var(--primary-color);
+}
+
+p.date {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+h4.company-name {
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+}
