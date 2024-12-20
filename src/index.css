@@ -43,41 +43,45 @@ input {
 #linkedin-preview,
 #twitter-preview {
     margin-bottom: 1em;
-}
-
-#facebook-preview {
-    background-image: url('/public/assets/img/fb-preview.jpg');
-    background-size: cover;
-    background-position: center;
-
-}
-
-#linkedin-preview {
-    background-image: url('/public/assets/img/linkedin.jpg');
     background-size: cover;
     background-position: center;
 }
 
-#twitter-preview {
-    background-image: url('/public/assets/img/x-preview.jpg');
-    background-size: cover;
-    background-position: center;
+#facebook-preview.dark {
+    background-image: url('/public/assets/img/fb-dark.jpg');
+}
+
+#linkedin-preview.dark {
+    background-image: url('/public/assets/img/linkedin-dark.jpg');
+}
+
+#twitter-preview.dark {
+    background-image: url('/public/assets/img/x-dark.jpg');
+}
+
+#facebook-preview.light {
+    background-image: url('/public/assets/img/fb-light.jpg');
+}
+
+#linkedin-preview.light {
+    background-image: url('/public/assets/img/linkedin-light.jpg');
+}
+
+#twitter-preview.light {
+    background-image: url('/public/assets/img/x-light.jpg');
 }
 
 .image-preview {
     margin-bottom: 2em;
 }
 
-#facebook-preview>div,
-#linkedin-preview>div,
-#twitter-preview>div {
-    padding: 4em 2em;
+p.achieved-audit {
+    font-size: 2.6em;
+    font-weight: bold;
 }
 
 p.achieved-audit {
     color: #fff;
-    font-size: 3em;
-    font-weight: bold;
 }
 
 p.achieved-audit span {
@@ -94,4 +98,12 @@ h4.company-name {
     color: #fff;
     font-size: 2em;
     font-weight: bold;
+}
+
+.image-preview .logo {
+    max-height: 30em;
+}
+
+img.service-image {
+    max-width: 20em;
 }
