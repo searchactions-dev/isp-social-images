@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import domtoimage from 'dom-to-image';
+import { toPng, toJpeg } from 'dom-to-image-retina';
 
 const ImageGenerator = () => {
     const [service, setService] = useState('SOC 1');
@@ -73,52 +73,20 @@ const ImageGenerator = () => {
         );
     };
 
-    const downloadImage = (platform: string) => {
+    const downloadImage = async (platform: string) => {
         const element = document.getElementById(`${platform}-preview`);
         if (element) {
-            // Create a style element to include the font
-            const style = document.createElement('style');
-            style.innerHTML = `
-                @font-face {
-                    font-family: 'Poppins';
-                    src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap') format('woff2');
-                    font-weight: 400;
-                    font-style: normal;
-                }
-                body {
-                    font-family: 'Poppins', sans-serif;
-                }
-            `;
-            document.head.appendChild(style); // Append the style to the document head
-
-            // Set the scale for higher resolution
-            const scale = 1; // Scale factor for 1x resolution
-            const originalWidth = element.offsetWidth;
-            const originalHeight = element.offsetHeight;
-
-            domtoimage.toJpeg(element, { 
-                quality: 1.0,
-                width: originalWidth * scale,
-                height: originalHeight * scale,
-                style: {
-                    transform: `scale(${scale})`,
-                    transformOrigin: 'top left',
-                    width: `${originalWidth}px`,
-                    height: `${originalHeight}px`
-                }
-            })
-            .then((dataUrl) => {
+            try {
+                const dataUrl = await toJpeg(element, { quality: 1.0 });
                 const link = document.createElement('a');
                 link.href = dataUrl;
                 link.download = `${platform}.jpg`;
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
-                document.head.removeChild(style); // Clean up the style element
-            })
-            .catch((error) => {
+            } catch (error) {
                 console.error("Error capturing the image:", error);
-            });
+            }
         } else {
             console.error(`Element with ID ${platform}-preview not found.`);
         }
