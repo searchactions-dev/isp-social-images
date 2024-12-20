@@ -76,9 +76,16 @@ const ImageGenerator = () => {
     const downloadImage = (platform: string) => {
         const element = document.getElementById(`${platform}-preview`);
         if (element) {
-            html2canvas(element, { scale: 1 }).then((canvas) => {
+            html2canvas(element, { scale: 4, useCORS: true, allowTaint: true }).then((canvas) => {
+                const resizedCanvas = document.createElement('canvas');
+                const context = resizedCanvas.getContext('2d');
+                if (context) {
+                    resizedCanvas.width = element.clientWidth; // Original div width
+                    resizedCanvas.height = element.clientHeight; // Original div height
+                    context.drawImage(canvas, 0, 0, canvas.width, canvas.height, 0, 0, resizedCanvas.width, resizedCanvas.height);
+                }
                 const link = document.createElement('a');
-                link.href = canvas.toDataURL('image/jpeg', 1.0);
+                link.href = resizedCanvas.toDataURL('image/jpeg', 1.0);
                 link.download = `${platform}.jpg`;
                 document.body.appendChild(link);
                 link.click();

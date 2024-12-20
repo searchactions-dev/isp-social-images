@@ -10,11 +10,15 @@
     --text-color: #0a0f12;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
 body {
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     /* Updated font-family to include Poppins */
     margin: 0;
     padding: 20px;
+    /* 20px */
     color: var(--text-color);
 }
 
@@ -23,9 +27,12 @@ button {
     color: var(--text-color) !important;
     border: none !important;
     padding: 10px 15px !important;
+    /* 10px 15px */
     border-radius: 5px !important;
+    /* 5px */
     font-weight: 600 !important;
-    font-size: .85em !important;
+    font-size: 13.6px !important;
+    /* 13.6px */
 }
 
 h1 {
@@ -34,15 +41,19 @@ h1 {
 
 input {
     margin: 10px 0;
+    /* 10px 0 */
     padding: 10px;
+    /* 10px */
     width: 100%;
     max-width: 300px;
+    /* 300px */
 }
 
 #facebook-preview,
 #linkedin-preview,
 #twitter-preview {
-    margin-bottom: 1em;
+    margin-bottom: 16px;
+    /* 16px */
     background-size: cover;
     background-position: center;
 }
@@ -72,11 +83,13 @@ input {
 }
 
 .image-preview {
-    margin-bottom: 2em;
+    margin-bottom: 32px;
+    /* 32px */
 }
 
 p.achieved-audit {
-    font-size: 2.6em;
+    font-size: 41.6px;
+    /* 41.6px */
     font-weight: bold;
 }
 
@@ -94,35 +107,42 @@ p.achieved-audit span {
 
 p.date {
     color: #fff;
-    font-size: 1.5em;
+    font-size: 24px;
+    /* 24px */
     font-weight: bold;
 }
 
 h4.company-name {
     color: #fff;
-    font-size: 2em;
+    font-size: 32px;
+    /* 32px */
     font-weight: bold;
 }
 
 .image-preview .logo {
-    max-width: 27em;
+    max-width: 432px;
+    /* 432px */
 }
 
 img.service-image {
-    max-width: 20em;
+    max-width: 320px;
+    /* 320px */
 }
 
 #facebook-preview img.service-image {
     position: relative;
     left: 6px;
+    /* 6px */
 }
 
 #linkedin-preview img.service-image {
     position: relative;
     left: 5px;
+    /* 5px */
 }
 
 #twitter-preview img.service-image {
     position: relative;
     left: -3px;
+    /* -3px */
 }
