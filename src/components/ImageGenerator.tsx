@@ -60,8 +60,8 @@ const ImageGenerator = () => {
 
         return (
             <div className="h-full">
-                <div className="flex justify-center items-center gap-12 h-full relative">
-                    <div className="flex flex-col items-center justify-center text-center gap-6 preview-content w-1/2">
+                <div className="flex justify-center items-center h-full relative">
+                    <div className="flex flex-col items-center justify-center text-center gap-6 preview-content w-1/2 p-6">
                         {logo && <img src={URL.createObjectURL(logo)} alt="Logo" className="logo" />}
                         <p className="achieved-audit">Achieved Their <span>{service}</span> Audit</p>
                     </div>

@@ -114,15 +114,15 @@ img.service-image {
 
 #facebook-preview img.service-image {
     position: relative;
-    left: -6px;
+    left: 6px;
 }
 
 #linkedin-preview img.service-image {
     position: relative;
-    left: -7px;
+    left: 5px;
 }
 
 #twitter-preview img.service-image {
     position: relative;
-    left: -15px;
+    left: -3px;
 }
