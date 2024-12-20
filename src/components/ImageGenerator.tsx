@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import html2canvas from 'html2canvas';
+import domtoimage from 'dom-to-image';
 
 const ImageGenerator = () => {
     const [service, setService] = useState('SOC 1');
@@ -76,23 +76,47 @@ const ImageGenerator = () => {
     const downloadImage = (platform: string) => {
         const element = document.getElementById(`${platform}-preview`);
         if (element) {
-            html2canvas(element, { scale: 4, useCORS: true, allowTaint: true }).then((canvas) => {
-                const resizedCanvas = document.createElement('canvas');
-                const context = resizedCanvas.getContext('2d');
-                if (context) {
-                    resizedCanvas.width = element.clientWidth; // Original div width
-                    resizedCanvas.height = element.clientHeight; // Original div height
-                    context.drawImage(canvas, 0, 0, canvas.width, canvas.height, 0, 0, resizedCanvas.width, resizedCanvas.height);
+            // Create a style element to include the font
+            const style = document.createElement('style');
+            style.innerHTML = `
+                @font-face {
+                    font-family: 'Poppins';
+                    src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap') format('woff2');
+                    font-weight: 400;
+                    font-style: normal;
                 }
+                body {
+                    font-family: 'Poppins', sans-serif;
+                }
+            `;
+            document.head.appendChild(style); // Append the style to the document head
+
+            // Set the scale for higher resolution
+            const scale = 1; // Scale factor for 1x resolution
+            const originalWidth = element.offsetWidth;
+            const originalHeight = element.offsetHeight;
+
+            domtoimage.toJpeg(element, { 
+                quality: 1.0,
+                width: originalWidth * scale,
+                height: originalHeight * scale,
+                style: {
+                    transform: `scale(${scale})`,
+                    transformOrigin: 'top left',
+                    width: `${originalWidth}px`,
+                    height: `${originalHeight}px`
+                }
+            })
+            .then((dataUrl) => {
                 const link = document.createElement('a');
-                link.href = resizedCanvas.toDataURL('image/jpeg', 1.0);
+                link.href = dataUrl;
                 link.download = `${platform}.jpg`;
                 document.body.appendChild(link);
                 link.click();
-                setTimeout(() => {
-                    document.body.removeChild(link);
-                }, 100);
-            }).catch((error) => {
+                document.body.removeChild(link);
+                document.head.removeChild(style); // Clean up the style element
+            })
+            .catch((error) => {
                 console.error("Error capturing the image:", error);
             });
         } else {
