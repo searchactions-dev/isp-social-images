@@ -80,8 +80,12 @@ p.achieved-audit {
     font-weight: bold;
 }
 
-p.achieved-audit {
+.dark p.achieved-audit {
     color: #fff;
+}
+
+.light p.achieved-audit {
+    color: var(--text-color);
 }
 
 p.achieved-audit span {
@@ -101,9 +105,24 @@ h4.company-name {
 }
 
 .image-preview .logo {
-    max-height: 30em;
+    max-width: 27em;
 }
 
 img.service-image {
     max-width: 20em;
+}
+
+#facebook-preview img.service-image {
+    position: relative;
+    left: -6px;
+}
+
+#linkedin-preview img.service-image {
+    position: relative;
+    left: -7px;
+}
+
+#twitter-preview img.service-image {
+    position: relative;
+    left: -15px;
 }

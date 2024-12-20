@@ -60,12 +60,14 @@ const ImageGenerator = () => {
 
         return (
             <div className="h-full">
-                <div className="flex justify-center items-center gap-24 h-full">
-                    <div className="flex flex-col items-center justify-center text-center gap-24">
+                <div className="flex justify-center items-center gap-12 h-full relative">
+                    <div className="flex flex-col items-center justify-center text-center gap-6 preview-content w-1/2">
                         {logo && <img src={URL.createObjectURL(logo)} alt="Logo" className="logo" />}
                         <p className="achieved-audit">Achieved Their <span>{service}</span> Audit</p>
                     </div>
-                    {service && <img src={serviceImage[service]} alt={`${service} Image`} className="service-image" />}
+                    <div className="preview-image w-1/2 flex justify-center items-center">
+                        {service && <img src={serviceImage[service]} alt={`${service} Image`} className="service-image" />}
+                    </div>
                 </div>
             </div>
         );
@@ -93,7 +95,7 @@ const ImageGenerator = () => {
 
     return (
         <div className="p-5 bg-gray-100 flex">
-            <div className="flex-1">
+            <div className="flex-1 flex flex-col gap-4">
                 <select value={service} onChange={(e) => setService(e.target.value)} className="border p-2 mb-4 w-full max-w-xs">
                     {services.map((srv) => (
                         <option key={srv} value={srv}>{srv}</option>
@@ -111,7 +113,7 @@ const ImageGenerator = () => {
                 />
             </div>
             <div className="flex-1">
-                <h3 className="text-lg font-bold mb-2">Image Previews</h3>
+                <h3 className="text-lg font-bold mb-2">Social Media Image Previews</h3>
                 <div className="image-preview">
                     <div id="facebook-preview" className={layout} style={{ width: '1200px', height: '630px' }}>
                         {generateImagePreview('facebook')}
