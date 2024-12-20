@@ -101,25 +101,35 @@ const ImageGenerator = () => {
     };
 
     return (
-        <div className="p-5 bg-gray-100 flex">
-            <div className="flex-1 flex flex-col gap-4">
-                <select value={service} onChange={(e) => setService(e.target.value)} className="border p-2 mb-4 w-full max-w-xs">
+        <div className="flex" style={{ backgroundColor: '#fafaff' }}>
+            <div className="flex-1 flex flex-col gap-4 p-4">
+                <div className="flex flex-row align-center items-center gap-2">
+                <label htmlFor="service-select">Select Service:</label>
+                <select id="service-select" value={service} onChange={(e) => setService(e.target.value)} className="border p-2 w-full max-w-xs">
                     {services.map((srv) => (
                         <option key={srv} value={srv}>{srv}</option>
                     ))}
                 </select>
-                <select value={layout} onChange={(e) => setLayout(e.target.value)} className="border p-2 mb-4 w-full max-w-xs">
+                </div>
+                <div className="flex flex-row align-center items-center gap-2">
+                <label htmlFor="layout-select">Select Layout:</label>
+                <select id="layout-select" value={layout} onChange={(e) => setLayout(e.target.value)} className="border p-2 w-full max-w-xs">
                     <option value="light">Light Layout</option>
                     <option value="dark">Dark Layout</option>
                 </select>
+                </div>
+               <div className="flex flex-row align-center items-center gap-2">
+               <label htmlFor="logo-upload">Upload Logo:</label>
                 <input
+                    id="logo-upload"
                     type="file"
                     accept=".png, .jpg, .jpeg"
                     onChange={handleLogoChange}
-                    className="border p-2 mb-4 w-full max-w-xs"
+                    className="border p-2 w-full max-w-xs"
                 />
+               </div>
             </div>
-            <div className="flex-1">
+            <div className="flex-1 pt-4">
                 <h3 className="text-lg font-bold mb-2">Social Media Image Previews</h3>
                 <div className="image-preview">
                     <div id="facebook-preview" className={layout} style={{ width: '1200px', height: '630px' }}>
