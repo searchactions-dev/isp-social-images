@@ -168,3 +168,53 @@ div#twitter-preview.hide-fix {
     position: relative;
     left: -3px;
 }
+
+@media (max-width: 1100px) {
+    .not-hidden img.service-image {
+        max-height: 300px;
+    }
+
+    .not-hidden p.achieved-audit {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .not-hidden img.service-image {
+        max-height: 240px;
+    }
+
+    .not-hidden p.achieved-audit {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 800px) {
+    .not-hidden img.service-image {
+        max-height: 180px;
+    }
+
+    .not-hidden p.achieved-audit {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 600px) {
+    .not-hidden img.service-image {
+        max-height: 120px;
+    }
+
+    .not-hidden p.achieved-audit {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .not-hidden img.service-image {
+        max-height: 80px;
+    }
+
+    .not-hidden p.achieved-audit {
+        font-size: 16px;
+    }
+}

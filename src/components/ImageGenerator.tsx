@@ -80,15 +80,13 @@ const ImageGenerator = () => {
                 const dataUrl = await toJpeg(element, { quality: 1.0 });
                 const link = document.createElement('a');
                 link.href = dataUrl;
-                link.download = `${platform}.jpg`;
+                link.download = `social-media-${platform}-${service}.jpg`; // Updated filename format
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
             } catch (error) {
-                console.error("Error capturing the image:", error);
             }
         } else {
-            console.error(`Element with ID ${platform}-preview not found.`);
         }
     };
 
@@ -124,7 +122,7 @@ const ImageGenerator = () => {
             <div className="pt-4 image-panel p-2 w-full xl:w-3/4">
                 <h3 className="text-lg font-bold mb-2">Social Media Image Previews</h3>
                 <div className="image-preview">
-                    <div id="facebook-preview" className={layout} style={{ aspectRatio: '40 / 21' }}>
+                    <div id="facebook-preview" className={`${layout} not-hidden`} style={{ aspectRatio: '40 / 21' }}>
                         {generateImagePreview('facebook')}
                     </div>
 
@@ -136,7 +134,7 @@ const ImageGenerator = () => {
                     </button>
                 </div>
                 <div className="image-preview">
-                    <div id="linkedin-preview" className={layout} style={{ aspectRatio: '1.91/1' }}>
+                    <div id="linkedin-preview" className={`${layout} not-hidden`} style={{ aspectRatio: '1.91/1' }}>
                         {generateImagePreview('linkedin')}
                     </div>
                     <div id="linkedin-preview" className={`${layout} hide-fix`} style={{width: '1200px', height: '627px' }}>
@@ -147,7 +145,7 @@ const ImageGenerator = () => {
                     </button>
                 </div>
                 <div className="image-preview">
-                    <div id="twitter-preview" className={layout} style={{ aspectRatio: '16/9' }}>
+                    <div id="twitter-preview" className={`${layout} not-hidden`} style={{ aspectRatio: '16/9' }}>
                         {generateImagePreview('twitter')}
                     </div>
                     <div id="twitter-preview" className={`${layout} hide-fix`} style={{ width: '1200px', height: '675px' }}>
