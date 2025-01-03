@@ -74,7 +74,7 @@ const ImageGenerator = () => {
     };
 
     const downloadImage = async (platform: string) => {
-        const element = document.getElementById(`${platform}-preview`);
+        const element = document.querySelector(`div#${platform}-preview.hide-fix`);
         if (element) {
             try {
                 const dataUrl = await toJpeg(element, { quality: 1.0 });
@@ -127,6 +127,10 @@ const ImageGenerator = () => {
                     <div id="facebook-preview" className={layout} style={{ aspectRatio: '40 / 21' }}>
                         {generateImagePreview('facebook')}
                     </div>
+
+                    <div id="facebook-preview" className={`${layout} hide-fix`} style={{ width: '1200px', height: '630px' }}>
+                        {generateImagePreview('facebook')}
+                    </div>
                     <button onClick={() => downloadImage('facebook')}>
                         Download Facebook Image
                     </button>
@@ -135,12 +139,18 @@ const ImageGenerator = () => {
                     <div id="linkedin-preview" className={layout} style={{ aspectRatio: '1.91/1' }}>
                         {generateImagePreview('linkedin')}
                     </div>
+                    <div id="linkedin-preview" className={`${layout} hide-fix`} style={{width: '1200px', height: '627px' }}>
+                        {generateImagePreview('linkedin')}
+                    </div>
                     <button onClick={() => downloadImage('linkedin')}>
                         Download LinkedIn Image
                     </button>
                 </div>
                 <div className="image-preview">
                     <div id="twitter-preview" className={layout} style={{ aspectRatio: '16/9' }}>
+                        {generateImagePreview('twitter')}
+                    </div>
+                    <div id="twitter-preview" className={`${layout} hide-fix`} style={{ width: '1200px', height: '675px' }}>
                         {generateImagePreview('twitter')}
                     </div>
                     <button onClick={() => downloadImage('twitter')}>
