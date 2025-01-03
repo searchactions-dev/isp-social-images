@@ -121,11 +121,14 @@ h4.company-name {
 
 img.service-image {
     max-width: 320px;
+    aspect-ratio: 32/39;
+    width: 100%;
 }
 
 #facebook-preview img.service-image {
     position: relative;
     left: 6px;
+    height: auto;
 }
 
 #linkedin-preview img.service-image {

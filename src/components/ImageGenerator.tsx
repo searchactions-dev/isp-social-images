@@ -43,15 +43,15 @@ const ImageGenerator = () => {
             'GLBA': '/assets/img/badges/GLBA.svg',
             'HITRUST': '/assets/img/badges/HITRUST.svg',
             'HIPAA': '/assets/img/badges/HIPAA.svg',
-            'ISO 27001': '/assets/img/badges/SO-27001.svg',
+            'ISO 27001': '/assets/img/badges/ISO-27001.svg',
             'ISO 50001': '/assets/img/badges/ISO-50001.svg',
             'NERC CIP': '/assets/img/badges/NERC-CIP.svg',
             'NIST': '/assets/img/badges/NIST.svg',
             'Pentest': '/assets/img/badges/Pentest.svg',
             'PCI DSS': '/assets/img/badges/PCI-DSS.svg',
             'SOC 1': '/assets/img/badges/SOC-1.svg',
-            'SOC 2': '/assets/img/badges/SOC2.svg',
-            'SOC 3': '/assets/img/badges/SOC3.svg',
+            'SOC 2': '/assets/img/badges/SOC-2.svg',
+            'SOC 3': '/assets/img/badges/SOC-3.svg',
             'SOC for Cybersecurity': '/assets/img/badges/Soc-for-cybersecurity.svg',
             'SOC for Vendor Supply Chain': '/assets/img/badges/Soc-for-vendor-supply-chain.svg',
             'SSAE-19': '/assets/img/badges/SSAE-19.svg',
@@ -93,8 +93,8 @@ const ImageGenerator = () => {
     };
 
     return (
-        <div className="flex" style={{ backgroundColor: '#fafaff' }}>
-            <div className="flex-1 flex flex-col gap-4 p-4">
+        <div className="flex flex-col xl:flex-row w-full" style={{ backgroundColor: '#fafaff' }}>
+            <div className="flex flex-col gap-4 p-12 sidebar w-full xl:w-1/4">
                 <div className="flex flex-row align-center items-center gap-2">
                 <label htmlFor="service-select">Select Service:</label>
                 <select id="service-select" value={service} onChange={(e) => setService(e.target.value)} className="border p-2 w-full max-w-xs">
@@ -121,10 +121,10 @@ const ImageGenerator = () => {
                 />
                </div>
             </div>
-            <div className="flex-1 pt-4">
+            <div className="pt-4 image-panel p-2 w-full xl:w-3/4">
                 <h3 className="text-lg font-bold mb-2">Social Media Image Previews</h3>
                 <div className="image-preview">
-                    <div id="facebook-preview" className={layout} style={{ width: '1200px', height: '630px' }}>
+                    <div id="facebook-preview" className={layout} style={{ aspectRatio: '40 / 21' }}>
                         {generateImagePreview('facebook')}
                     </div>
                     <button onClick={() => downloadImage('facebook')}>
@@ -132,7 +132,7 @@ const ImageGenerator = () => {
                     </button>
                 </div>
                 <div className="image-preview">
-                    <div id="linkedin-preview" className={layout} style={{ width: '1200px', height: '627px' }}>
+                    <div id="linkedin-preview" className={layout} style={{ aspectRatio: '1.91/1' }}>
                         {generateImagePreview('linkedin')}
                     </div>
                     <button onClick={() => downloadImage('linkedin')}>
@@ -140,7 +140,7 @@ const ImageGenerator = () => {
                     </button>
                 </div>
                 <div className="image-preview">
-                    <div id="twitter-preview" className={layout} style={{ width: '1200px', height: '675px' }}>
+                    <div id="twitter-preview" className={layout} style={{ aspectRatio: '16/9' }}>
                         {generateImagePreview('twitter')}
                     </div>
                     <button onClick={() => downloadImage('twitter')}>
