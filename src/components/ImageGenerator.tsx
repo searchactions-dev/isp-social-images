@@ -152,7 +152,7 @@ const ImageGenerator = () => {
                         {generateImagePreview('twitter')}
                     </div>
                     <button onClick={() => downloadImage('twitter')}>
-                        Download Twitter Image
+                        Download X Image
                     </button>
                 </div>
             </div>
