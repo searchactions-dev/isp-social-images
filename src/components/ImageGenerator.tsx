@@ -5,6 +5,7 @@ const ImageGenerator = () => {
     const [service, setService] = useState('SOC 1');
     const [logo, setLogo] = useState<File | null>(null);
     const [layout, setLayout] = useState('light'); // New state for layout
+    const [companyLogo, setCompanyLogo] = useState<File | null>(null); // Updated state for company logo
 
     const services = [
         'CCPA', 
@@ -31,6 +32,12 @@ const ImageGenerator = () => {
     const handleLogoChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         if (event.target.files) {
             setLogo(event.target.files[0]);
+        }
+    };
+
+    const handleCompanyLogoChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        if (event.target.files) {
+            setCompanyLogo(event.target.files[0]);
         }
     };
 
@@ -61,9 +68,9 @@ const ImageGenerator = () => {
         return (
             <div className="h-full">
                 <div className="flex justify-center items-center h-full relative">
-                    <div className="flex flex-col items-center justify-center text-center gap-6 preview-content w-1/2 p-6">
-                        {logo && <img src={URL.createObjectURL(logo)} alt="Logo" className="logo" />}
-                        <p className="achieved-audit">Achieved Their <span>{service}</span> Audit</p>
+                    <div className="flex flex-col items-center justify-center text-center gap-4 preview-content w-1/2 p-6">
+                        {companyLogo && <img src={URL.createObjectURL(companyLogo)} alt="Company Logo" className="client-logo" />}
+                        <p className="achieved-audit">Achieved Their <span>{service}</span> Audit </p>
                     </div>
                     <div className="preview-image w-1/2 flex justify-center items-center">
                         {service && <img src={serviceImage[service]} alt={`${service} Image`} className="service-image" />}
@@ -93,6 +100,16 @@ const ImageGenerator = () => {
     return (
         <div className="flex flex-col xl:flex-row w-full" style={{ backgroundColor: '#fafaff' }}>
             <div className="flex flex-col gap-4 p-12 sidebar w-full xl:w-1/4">
+                <div className="flex flex-row align-center items-center gap-2">
+                <label htmlFor="company-logo">Company Logo:</label>
+                <input
+                    id="company-logo"
+                    type="file"
+                    accept=".png, .jpg, .jpeg"
+                    onChange={handleCompanyLogoChange}
+                    className="border p-2 w-full max-w-xs"
+                />
+                </div>
                 <div className="flex flex-row align-center items-center gap-2">
                 <label htmlFor="service-select">Select Service:</label>
                 <select id="service-select" value={service} onChange={(e) => setService(e.target.value)} className="border p-2 w-full max-w-xs">
