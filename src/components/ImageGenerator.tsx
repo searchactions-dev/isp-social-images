@@ -69,7 +69,7 @@ const ImageGenerator = () => {
             <div className="h-full">
                 <div className="flex justify-center items-center h-full relative">
                     <div className="flex flex-col items-center justify-center text-center gap-4 preview-content w-1/2 p-6">
-                        {companyLogo && <img src={URL.createObjectURL(companyLogo)} alt="Company Logo" className="client-logo" />}
+                        {companyLogo && <img src={URL.createObjectURL(companyLogo)} alt="Company Logo" className="client-logo" style={{ maxWidth: '260px' }} />}
                         <p className="achieved-audit">Achieved Their <span>{service}</span> Audit </p>
                     </div>
                     <div className="preview-image w-1/2 flex justify-center items-center">
