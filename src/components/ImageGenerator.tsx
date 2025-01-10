@@ -122,11 +122,11 @@ const ImageGenerator = () => {
             <div className="pt-4 image-panel p-2 w-full xl:w-3/4">
                 <h3 className="text-lg font-bold mb-2">Social Media Image Previews</h3>
                 <div className="image-preview">
-                    <div id="facebook-preview" className={`${layout} not-hidden`} style={{ aspectRatio: '40 / 21' }}>
+                    <div id="facebook-preview" className={`${layout} not-hidden ${service.replace(/\s+/g, '-').toLowerCase()}`} style={{ aspectRatio: '40 / 21' }}>
                         {generateImagePreview('facebook')}
                     </div>
 
-                    <div id="facebook-preview" className={`${layout} hide-fix`} style={{ width: '1200px', height: '630px' }}>
+                    <div id="facebook-preview" className={`${layout} hide-fix ${service.replace(/\s+/g, '-').toLowerCase()}`} style={{ width: '1200px', height: '630px' }}>
                         {generateImagePreview('facebook')}
                     </div>
                     <button onClick={() => downloadImage('facebook')}>
@@ -134,10 +134,10 @@ const ImageGenerator = () => {
                     </button>
                 </div>
                 <div className="image-preview">
-                    <div id="linkedin-preview" className={`${layout} not-hidden`} style={{ aspectRatio: '1.91/1' }}>
+                    <div id="linkedin-preview" className={`${layout} not-hidden ${service.replace(/\s+/g, '-').toLowerCase()}`} style={{ aspectRatio: '1.91/1' }}>
                         {generateImagePreview('linkedin')}
                     </div>
-                    <div id="linkedin-preview" className={`${layout} hide-fix`} style={{width: '1200px', height: '627px' }}>
+                    <div id="linkedin-preview" className={`${layout} hide-fix ${service.replace(/\s+/g, '-').toLowerCase()}`} style={{width: '1200px', height: '627px' }}>
                         {generateImagePreview('linkedin')}
                     </div>
                     <button onClick={() => downloadImage('linkedin')}>
@@ -145,10 +145,10 @@ const ImageGenerator = () => {
                     </button>
                 </div>
                 <div className="image-preview">
-                    <div id="twitter-preview" className={`${layout} not-hidden`} style={{ aspectRatio: '16/9' }}>
+                    <div id="twitter-preview" className={`${layout} not-hidden ${service.replace(/\s+/g, '-').toLowerCase()}`} style={{ aspectRatio: '16/9' }}>
                         {generateImagePreview('twitter')}
                     </div>
-                    <div id="twitter-preview" className={`${layout} hide-fix`} style={{ width: '1200px', height: '675px' }}>
+                    <div id="twitter-preview" className={`${layout} hide-fix ${service.replace(/\s+/g, '-').toLowerCase()}`} style={{ width: '1200px', height: '675px' }}>
                         {generateImagePreview('twitter')}
                     </div>
                     <button onClick={() => downloadImage('twitter')}>

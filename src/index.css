@@ -58,28 +58,281 @@ input {
     background-position: center;
 }
 
+/* DEFAULT BG */
 #facebook-preview.dark {
-    background-image: url('/public/assets/img/fb-dark.jpg');
+    background-image: url('/public/assets/img/bg/Facebook\ -\ dark\ -\ DARK\ GRAY.jpg');
 }
 
 #linkedin-preview.dark {
-    background-image: url('/public/assets/img/linkedin-dark.jpg');
+    background-image: url('/public/assets/img/bg/Linkedin\ -\ dark\ -\ DARK\ GRAY.jpg');
 }
 
 #twitter-preview.dark {
-    background-image: url('/public/assets/img/x-dark.jpg');
+    background-image: url('/public/assets/img/bg/X\ -\ dark\ -\ DARK\ GRAY.jpg');
 }
 
 #facebook-preview.light {
-    background-image: url('/public/assets/img/fb-light.jpg');
+    background-image: url('/public/assets/img/bg/Facebook\ -\ light\ -\ DARK\ GRAY.jpg');
 }
 
 #linkedin-preview.light {
-    background-image: url('/public/assets/img/linkedin-light.jpg');
+    background-image: url('/public/assets/img/bg/Linkedin\ -\ light\ -\ DARK\ GRAY.jpg');
 }
 
 #twitter-preview.light {
-    background-image: url('/public/assets/img/x-light.jpg');
+    background-image: url('/public/assets/img/bg/X\ -\ light\ -\ DARK\ GRAY.jpg');
+}
+
+/* CCPA, Pentest, SOC-2 */
+#facebook-preview.dark.ccpa,
+#facebook-preview.dark.pentest,
+#facebook-preview.dark.soc-2 {
+    background-image: url('/public/assets/img/bg/Facebook\ -\ dark\ -\ CCPA\ Pen\ Test\ SOC\ 2.jpg');
+}
+
+#linkedin-preview.dark.ccpa,
+#linkedin-preview.dark.pentest,
+#linkedin-preview.dark.soc-2 {
+    background-image: url('/public/assets/img/bg/Linkedin\ -\ dark\ -\ CCPA\ Pen\ Test\ SOC\ 2.jpg');
+}
+
+#twitter-preview.dark.ccpa,
+#twitter-preview.dark.pentest,
+#twitter-preview.dark.soc-2 {
+    background-image: url('/public/assets/img/bg/X\ -\ dark\ -\ CCPA\ Pen\ Test\ SOC\ 2.jpg');
+}
+
+#facebook-preview.light.ccpa,
+#facebook-preview.light.pentest,
+#facebook-preview.light.soc-2 {
+    background-image: url('/public/assets/img/bg/Facebook\ -\ light\ -\ CCPA\ Pen\ Test\ SOC\ 2.jpg');
+}
+
+#linkedin-preview.light.ccpa,
+#linkedin-preview.light.pentest,
+#linkedin-preview.light.soc-2 {
+    background-image: url('/public/assets/img/bg/Linkedin\ -\ light\ -\ CCPA\ Pen\ Test\ SOC\ 2.jpg');
+}
+
+#twitter-preview.light.ccpa,
+#twitter-preview.light.pentest,
+#twitter-preview.light.soc-2 {
+    background-image: url('/public/assets/img/bg/X\ -\ light\ -\ CCPA\ Pen\ Test\ SOC\ 2.jpg');
+}
+
+.ccpa p.achieved-audit span,
+.pentest p.achieved-audit span,
+.soc-2 p.achieved-audit span {
+    color: #f7b016;
+}
+
+/* FISMA, GDPR, GLBA, HIPAA */
+#facebook-preview.dark.fisma,
+#facebook-preview.dark.gdpr,
+#facebook-preview.dark.glba,
+#facebook-preview.dark.hipaa {
+    background-image: url('/public/assets/img/bg/Facebook\ -\ dark\ -\ FISMA\ GDPR\ GLBA.jpg    ');
+}
+
+#linkedin-preview.dark.fisma,
+#linkedin-preview.dark.gdpr,
+#linkedin-preview.dark.glba,
+#linkedin-preview.dark.hipaa {
+    background-image: url('/public/assets/img/bg/Linkedin\ -\ dark\ -\ FISMA\ GDPR\ GLBA.jpg');
+}
+
+#twitter-preview.dark.fisma,
+#twitter-preview.dark.gdpr,
+#twitter-preview.dark.glba,
+#twitter-preview.dark.hipaa {
+    background-image: url('/public/assets/img/bg/X\ -\ dark\ -\ FISMA\ GDPR\ GLBA.jpg');
+}
+
+#facebook-preview.light.fisma,
+#facebook-preview.light.gdpr,
+#facebook-preview.light.glba,
+#facebook-preview.light.hipaa {
+    background-image: url('/public/assets/img/bg/Facebook\ -\ light\ -\ FISMA\ GDPR\ GLBA.jpg');
+}
+
+#linkedin-preview.light.fisma,
+#linkedin-preview.light.gdpr,
+#linkedin-preview.light.glba,
+#linkedin-preview.light.hipaa {
+    background-image: url('/public/assets/img/bg/Linkedin\ -\ light\ -\ FISMA\ GDPR\ GLBA.jpg');
+}
+
+#twitter-preview.light.fisma,
+#twitter-preview.light.gdpr,
+#twitter-preview.light.glba,
+#twitter-preview.light.hipaa {
+    background-image: url('/public/assets/img/bg/X\ -\ light\ -\ FISMA\ GDPR\ GLBA.jpg');
+}
+
+.fisma p.achieved-audit span,
+.gdpr p.achieved-audit span,
+.glba p.achieved-audit span,
+.hipaa p.achieved-audit span {
+    color: #2d5e8a;
+}
+
+.fisma.dark p.achieved-audit span,
+.gdpr.dark p.achieved-audit span,
+.glba.dark p.achieved-audit span,
+.hipaa.dark p.achieved-audit span {
+    color: #74a2d0;
+}
+
+/* HITRUST */
+#facebook-preview.dark.hitrust {
+    background-image: url('/public/assets/img/bg/Facebook\ -\ dark\ -\ HITRUST.jpg');
+}
+
+#linkedin-preview.dark.hitrust {
+    background-image: url('/public/assets/img/bg/Linkedin\ -\ dark\ -\ HITRUST.jpg');
+}
+
+#twitter-preview.dark.hitrust {
+    background-image: url('/public/assets/img/bg/X\ -\ dark\ -\ HITRUST.jpg');
+}
+
+#facebook-preview.light.hitrust {
+    background-image: url('/public/assets/img/bg/Facebook\ -\ light\ -\ HITRUST.jpg');
+}
+
+#linkedin-preview.light.hitrust {
+    background-image: url('/public/assets/img/bg/Linkedin\ -\ light\ -\ HITRUST.jpg');
+}
+
+#twitter-preview.light.hitrust {
+    background-image: url('/public/assets/img/bg/X\ -\ light\ -\ HITRUST.jpg');
+}
+
+.hitrust p.achieved-audit span {
+    color: #dc3738;
+}
+
+/* ISO 27001 */
+#facebook-preview.dark.iso-27001,
+#facebook-preview.dark.iso-50001 {
+    background-image: url('/public/assets/img/bg/Facebook\ -\ dark\ -\ ISO\ 27001\ 50001.jpg');
+}
+
+#linkedin-preview.dark.iso-27001,
+#linkedin-preview.dark.iso-50001 {
+    background-image: url('/public/assets/img/bg/Linkedin\ -\ dark\ -\ ISO\ 27001\ 50001.jpg');
+}
+
+#twitter-preview.dark.iso-27001,
+#twitter-preview.dark.iso-50001 {
+    background-image: url('/public/assets/img/bg/X\ -\ dark\ -\ ISO\ 27001\ 50001.jpg');
+}
+
+#facebook-preview.light.iso-27001,
+#facebook-preview.light.iso-50001 {
+    background-image: url('/public/assets/img/bg/Facebook\ -\ light\ -\ ISO\ 27001\ 50001.jpg');
+}
+
+#linkedin-preview.light.iso-27001,
+#linkedin-preview.light.iso-50001 {
+    background-image: url('/public/assets/img/bg/Linkedin\ -\ light\ -\ ISO\ 27001\ 50001.jpg');
+}
+
+#twitter-preview.light.iso-27001,
+#twitter-preview.light.iso-50001 {
+    background-image: url('/public/assets/img/bg/X\ -\ light\ -\ ISO\ 27001\ 50001.jpg');
+}
+
+.iso-27001 p.achieved-audit span,
+.iso-50001 p.achieved-audit span {
+    color: #299eb8;
+}
+
+/* PCI DSS */
+#facebook-preview.dark.pci-dss {
+    background-image: url('/public/assets/img/bg/Facebook\ -\ dark\ -\ PCI\ DSS.jpg');
+}
+
+#linkedin-preview.dark.pci-dss {
+    background-image: url('/public/assets/img/bg/Linkedin\ -\ dark\ -\ PCI\ DSS.jpg');
+}
+
+#twitter-preview.dark.pci-dss {
+    background-image: url('/public/assets/img/bg/X\ -\ dark\ -\ PCI\ DSS.jpg');
+}
+
+#facebook-preview.light.pci-dss {
+    background-image: url('/public/assets/img/bg/Facebook\ -\ light\ -\ PCI\ DSS.jpg');
+}
+
+#linkedin-preview.light.pci-dss {
+    background-image: url('/public/assets/img/bg/Linkedin\ -\ light\ -\ PCI\ DSS.jpg');
+}
+
+#twitter-preview.light.pci-dss {
+    background-image: url('/public/assets/img/bg/X\ -\ light\ -\ PCI\ DSS.jpg');
+}
+
+.pci-dss p.achieved-audit span {
+    color: #75ac30;
+}
+
+/* SOC 1 */
+#facebook-preview.dark.soc-1 {
+    background-image: url('/public/assets/img/bg/Facebook\ -\ dark\ -\ SOC\ 1.jpg');
+}
+
+#linkedin-preview.dark.soc-1 {
+    background-image: url('/public/assets/img/bg/Linkedin\ -\ dark\ -\ SOC\ 1.jpg');
+}
+
+#twitter-preview.dark.soc-1 {
+    background-image: url('/public/assets/img/bg/X\ -\ dark\ -\ SOC\ 1.jpg');
+}
+
+#facebook-preview.light.soc-1 {
+    background-image: url('/public/assets/img/bg/Facebook\ -\ light\ -\ SOC\ 1.jpg');
+}
+
+#linkedin-preview.light.soc-1 {
+    background-image: url('/public/assets/img/bg/Linkedin\ -\ light\ -\ SOC\ 1.jpg');
+}
+
+#twitter-preview.light.soc-1 {
+    background-image: url('/public/assets/img/bg/X\ -\ light\ -\ SOC\ 1.jpg');
+}
+
+.soc-1 p.achieved-audit span {
+    color: #158cf8;
+}
+
+/* SOC 3 */
+#facebook-preview.dark.soc-3 {
+    background-image: url('/public/assets/img/bg/Facebook\ -\ dark\ -\ SOC\ 3.jpg');
+}
+
+#linkedin-preview.dark.soc-3 {
+    background-image: url('/public/assets/img/bg/Linkedin\ -\ dark\ -\ SOC\ 3.jpg');
+}
+
+#twitter-preview.dark.soc-3 {
+    background-image: url('/public/assets/img/bg/X\ -\ dark\ -\ SOC\ 3.jpg');
+}
+
+#facebook-preview.light.soc-3 {
+    background-image: url('/public/assets/img/bg/Facebook\ -\ light\ -\ SOC\ 3.jpg');
+}
+
+#linkedin-preview.light.soc-3 {
+    background-image: url('/public/assets/img/bg/Linkedin\ -\ light\ -\ SOC\ 3.jpg');
+}
+
+#twitter-preview.light.soc-3 {
+    background-image: url('/public/assets/img/bg/X\ -\ light\ -\ SOC\ 3.jpg');
+}
+
+.soc-3 p.achieved-audit span {
+    color: #f20c43;
 }
 
 .image-preview {
