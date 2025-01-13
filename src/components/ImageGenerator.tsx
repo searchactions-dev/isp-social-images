@@ -127,7 +127,8 @@ const ImageGenerator = () => {
                 </div>
             </div>
             <div className="pt-4 image-panel p-2 w-full xl:w-3/4">
-                <h3 className="text-lg font-bold mb-2">Social Media Image Previews</h3>
+            <h1 className="text-m md:text-2xl font-bold mb-2">IS Partners Automated Social Media Generator Tool</h1>
+                <h3 className="text-sm md:text-lg mb-2">Social Media Image Previews</h3>
                 <div className="image-preview">
                     <div id="facebook-preview" className={`${layout} not-hidden ${service.replace(/\s+/g, '-').toLowerCase()}`} style={{ aspectRatio: '40 / 21' }}>
                         {generateImagePreview('facebook')}
