@@ -101,7 +101,7 @@ const ImageGenerator = () => {
         <div className="flex flex-col xl:flex-row w-full" style={{ backgroundColor: '#fafaff' }}>
             <div className="flex flex-col gap-4 p-12 sidebar w-full xl:w-1/4">
                 <div className="flex flex-row align-center items-center gap-2">
-                <label htmlFor="company-logo">Company Logo:</label>
+                <label htmlFor="company-logo">Upload Company Logo</label>
                 <input
                     id="company-logo"
                     type="file"
