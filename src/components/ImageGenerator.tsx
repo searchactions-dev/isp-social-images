@@ -125,16 +125,6 @@ const ImageGenerator = () => {
                     <option value="dark">Dark Layout</option>
                 </select>
                 </div>
-               <div className="flex flex-row align-center items-center gap-2">
-               <label htmlFor="logo-upload">Upload Logo:</label>
-                <input
-                    id="logo-upload"
-                    type="file"
-                    accept=".png, .jpg, .jpeg"
-                    onChange={handleLogoChange}
-                    className="border p-2 w-full max-w-xs"
-                />
-               </div>
             </div>
             <div className="pt-4 image-panel p-2 w-full xl:w-3/4">
                 <h3 className="text-lg font-bold mb-2">Social Media Image Previews</h3>
